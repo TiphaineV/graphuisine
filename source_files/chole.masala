@@ -1,0 +1,99 @@
+%%{
+  init: {
+    'theme': 'default',
+    'themeVariables': {
+        'edgeLabelBackground': '#ffffff'
+    }
+  }
+}%%
+graph TD
+
+    classDef Ustensiles fill:#ddd,stroke:#333,stroke-width:4px;
+    poele(["Poele"]);
+    poele2(["Poele"]);
+    poele3(["Poele"]);
+    poele4(["Poele"]);
+    poele5(["Poele"]);
+    poele6(["Poele"]);
+    poele7(["Poele"]);
+    potibol(["Un calice,\n ou à défaut un Potibol,\n ou à défaut juste un bol"]);
+    passoire(["Passoire"]);
+    class poele,poele2,poele3,poele4,poele5,poele6,poele7,passoire,potibol Ustensiles;
+
+    serve(("Servir avec\ndes parathas"));
+
+
+    huile{{"Huile"}};
+	oignons{{"2 oignons"}};
+    oignonscoupes{{"Oignons coupés"}};
+    chickpea{{"Pois chiches"}};
+    tomatoes{{"4 tomates"}};
+    choppedtomatoes{{"Tomates en poticubes"}};
+    
+    ail{{"2cc/2 gousses d'ail "}}; 
+
+    coriandre{{"Bouquet de coriandre"}};
+    coriandrehachee{{"Coriandre hachée\ngrossièrement"}};
+    quelquesfeuilles{{"Quelques feuilles de coriandre\npour la déco"}};
+    
+
+    water{{"300 mL eau"}};
+
+    oignons --> oignonscoupes;
+    tomatoes -->|*chop chop chop chop*| choppedtomatoes;
+
+    huile --> poele;
+    poele -.->|Laisse bien chauffer l'huile| poele2;
+
+    subgraph fullspice ["Épices complètes"];
+    direction LR;
+    cannelle{{"1cm de cannelle"}};
+    cardamome{{"5-6 gousses de cardamome"}};
+    laurier{{"Une feuille de laurier"}};
+    girofle{{"2-3 clous de girofle"}};
+    end;
+    
+    fullspice --> poele2;
+
+    poele2 -.->|Laisse les aromes se développer, 1-2 minutes| poele3;
+    oignonscoupes --> poele3;
+    ail --> poele3;
+    poele3 -.->|"Appelle l'oignon jusqu'à ce qu'il revienne (environ 5 mn)"| poele4;
+    
+    
+    subgraph powderspices1 ["Épices en poudre"];
+    direction LR;
+        ginger{{"2cc gingembre en poudre"}};
+        curcuma{{"1/2cc curcuma"}};
+        chili{{"Piment en poudre selon l'envie"}};
+        sel{{"1 1/2 cc sel"}};
+    end;
+
+    powderspices1 --> potibol;
+
+    potibol -->|*splof*| poele4;
+    poele4 -.->|Mélange rapidement, laisse sauter 1 minute\nPasse à la suite avant que tes voisins ne sonnent\nparce que ça sent trop bon dans tout l'immeuble| poele5;
+    choppedtomatoes --> poele5;
+    
+    subgraph powderspices2 ["Épices en poudre (again)"];
+    direction LR;
+        coriandremoulue{{"1cc coriandre moulue"}};
+        cumin{{"1cc cumin en poudre"}};
+        masale{{"1cc masalé\n(remplaçable par un mélange curry/cumin)"}};
+    end;
+    
+    powderspices2 --> poele5;
+    poele5 -.->|"Touille, touille, 1 petite minute"| poele6;
+
+    chickpea --> passoire;
+
+    passoire -->|"Bien rincer"| poele6;
+    water --> poele6;
+    poele6 -.->|"bloubloublou à feu fort, puis à feu tout doux\njusqu'à avoir une consistance crémeuse qui met du baume au coeur\n(chez moi environ 20mn)"| poele7;
+    
+    coriandre --> coriandrehachee;
+    coriandre --> quelquesfeuilles;
+    
+    coriandrehachee --> poele7;
+    poele7 --> serve;
+    quelquesfeuilles --> serve;

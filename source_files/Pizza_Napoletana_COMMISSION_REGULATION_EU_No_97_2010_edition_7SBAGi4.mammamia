@@ -1,0 +1,52 @@
+graph TD
+title["<i>Pizza Napoletana “COMMISSION REGULATION (EU) No 97/2010” edition"]
+title ~~~ eau1
+
+%%ingrédients
+farine1(200g de farine de blé tendre <br>W 220 380)
+farine2(1,8kg de farine de blé tendre <br>W 220 380)
+levure(3g de levure <br>de bière)
+eau1(1L d'eau naturelle <br><u>potable)
+sel1(entre 50 et 55g de sel marin <br>ou sel de cuisine)
+sel2(sel)
+huile1(huile d'olive extra vierge)
+ail1(ail)
+origan1(origan)
+mozzarella1("<u>facultatif</u> : Mozzarella di Bufala Campana AOP")
+basilic1("<u>facultatif</u> : basilic frais")
+tomates1("tomates pelées <br>et/ou petites tomates (pomodorini) fraîches")
+
+
+%%ustensiles
+petrisseur1("pétrisseur, de préférence à fourche <br>(utile pour <u>le Grand Soir)")
+petrisseur2("pétrisseur, (toujours) de préférence à fourche")
+petrisseur3("pétrisseur, (le même) de préférence à fourche")
+petrisseur4("pétrisseur, (qui persévère dans son être) de préférence à fourche")
+
+eau1-->petrisseur1;sel1-->petrisseur1;farine1-->petrisseur1;levure-->petrisseur1
+
+petrisseur1-.->|enclencher|petrisseur2
+farine2-.->|ajouter progressivement|petrisseur2
+petrisseur2-.->|"laisser le pétrisseur pétrir jusqu’à atteindre la consistance souhaitée, définie comme le «point de pâte». <br>[±10 min]"|petrisseur3
+petrisseur3-.->|"travailler la pâte pendant 20 min à faible vitesse jusqu’à l'obtention d'une masse compacte unique. <br>[la pâte doit 1) ne pas coller au toucher, 2) être molle et 3) être élastique]"|petrisseur4
+petrisseur4-.->|sortir|pate(pâte)
+pate-.->|"<u>levage phase 1</u> : placer la pâte sur un plan de travail, couvrir d'un linge humide et laisser reposer pendant 2 h <br>puis découper une portion de pâte avec une spatule (entre 180 et 250g — la portion, pas la spatule) <br> et procéder au formage du petit pain (à la main, <u>impérativement)."|pate2(pâte primerophasée)
+pate2-.->|"<u>levage phase 2</u> : placer les petits pains dans une caisse pour aliments, laisser reposer 4 à 6 h à température ambiante."|pate3(pâte segundophasée)
+pate3-.->|"<u>formage</u> : s'armer d'une spatule (utile pour le <u>Grand Soir</u>), extraire le petit pain de la caisse et le placer sur un plan de travail légèrement fariné <br> puis former à l'aide des doigts (au nombre max. de vingt dans un contexte ordinaire) un disque de pâte [épaisseur max. au centre de 0,4 cm (+-10%) et de 1-2 cm sur le bord]"|pate4(pâte formée)
+
+subgraph pizzage
+
+pate4-->pate5("pizza en devenir")
+tomates1-->|"70 à 100g <br>réparties au moyen d'un mouvement <br><u>en spirale"|pate5
+origan1-->|"toujours réparti au moyen d'un mouvement <br><u>en spirale"|pate5
+huile1-->|"4 – 5 g [tolérance admise de + 20 %]<br> répartie (wait for it) <br><u>en spirale."|pate5
+ail1-->|"une gousse<br>sans pellicule extérieure<br>coupée en petites tranches"|pate5
+sel2-->|"<u>spiralement réparti</u>"|pate5
+mozzarella1-->|"80-100 g <br> en tranches, réparties sur toute la surface <br>(<u>en spirale</u> j'imagine)"|pate5
+basilic1-->|"quelques feuilles"|pate5
+end
+
+pate5-->pizza1("pizza devenue")
+pizza1-->|"transférer sur une pelle de boulanger (utile pour le <u>Grand Soir</u>), <br>faire glisser sur la sole du four à bois"|four
+four-->|"sortir"|pizza2(pizza)
+pizza2-->servir((("servir et consommer immédiatement")))

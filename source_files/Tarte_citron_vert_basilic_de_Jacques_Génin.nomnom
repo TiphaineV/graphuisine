@@ -1,0 +1,80 @@
+graph TD
+title[<i>Tarte citron vert basilic de Jacques Génin]
+style title fill:#FFF,stroke:#FFF
+title ~~~ beurre1
+
+subgraph "<u>ÉTAPE 1</u> : pâte sucrée (option de la flemme : acheter
+une pâte toute faite à Carrouf')"
+beurre1{{175g de beurre}}
+sucre1{{125g de sucre glace}}
+amande{{60g d'amande en poudre}}
+oeufs1{{"60g d'oeuf (entre 1 et 2)"}}
+jaune{{1 jaune d'oeuf}}
+vanille{{facultatif : vanille en gousse ou arôme}}
+sel{{1 pincée de sel}}
+farine{{310g de farine}}
+paton1{{"pâton"}};paton2{{"pâton"}};paton3{{"fond de tarte(s) cuit"}}
+
+bol1([bol]);bol2([bol]);bol3([bol]);bol4([bol])
+beurre1 --> bol1; sucre1 --> bol1; amande --> bol1
+bol1 -.-> |"crème vigoureusement <br> (avec un batteur ou à la main en
+public si tu veux flexer 💪🏻)"|bol2
+oeufs1-->bol2; jaune-->bol2; vanille-->bol2;sel-->bol2
+bol2 -.-> |travaille la pâte comme si elle avait mangé le dernier
+paquet de chips hier|bol3
+farine-->|ajoute en une fois|bol3
+bol3-.->|amalgame mollement jusqu'à obtenir une boule|bol4
+bol4-->paton1
+paton1-.->|"étale grossièrement entre 2 feuilles de papier cuisson,
+roule puis filme le tout et laisse au frais au moins 1h30 <br/> (j'ai
+déjà fait moins, c'est faisable mais le résultat est cradouillou et
+faut vouloir avoir du beurre plein les doigts)"|paton2
+paton2-.->|"étale puis enfourne les fonds de tarte à blanc pendant 20
+min à 180°"|paton3
+
+end
+
+subgraph "<u>ÉTAPE 2</u>: crémeux au citron vert (option de la flemme
+: faire juste ça -- c'est le Roi de tous les curds)"
+
+citron{{"180g de jus de citron verts, entre 6 et 12 <br>(just call me
+Madame Précision)"}}
+zeste{{"le zeste des 'entre 6 et 12' citrons"}}
+sucre2{{170g de sucre}}
+basilic{{"20g de basilic <br> (c'est une <u>grosse</u> touffe)"}}
+oeufs2{{3 oeufs}}
+beurre2{{200g de beurre}}
+agar{{"facultatif : agar agar"}}
+
+casserole1([casserole]);casserole2([casserole, sur le
+feu]);casserole3([casserole, hors du feu]);
+saladier1([saladier]);saladier2([saladier])
+
+citron-->casserole1;zeste-->casserole1;sucre2-->casserole1;basilic-->casserole1;oeufs2-->casserole1
+casserole1-.->|"chauffe à feu moyen-doux <br>(jamais au-dessus de 85º
+sinon tu transformes ton curd en omelette)"|casserole2
+casserole2-.->|"touille longtemps jusqu'à épaississement naturel de
+l'appareil </br> (si tu touilles et que ça tourbillonne plus, c'est
+que c'est bon)"|casserole3
+agar-->casserole3
+casserole3-.->|"filtre à travers un chinois pour éviter d'avoir
+<br>des feuilles de basilic cuites pas jolies dans ton beau
+crémeux"|saladier1
+saladier1-.->|"laisse refroidir à 45º (grosso merdouillo 5-6 min)"|saladier2
+beurre2-.->|"incorpore le beurre au mixeur plongeant qui fait vroum
+vroum"|saladier2
+saladier2===>|"verse dans le(s) fond(s) de tarte cuit(s) <br> et
+nettoie le saladier avec le doigt quand on te regarde pas"|paton3
+end
+
+subgraph "<u>ÉTAPE 3 : on y est presque !</u>"
+paton3-->|"pour un effet full Instagrammable, lisse à la spatule
+<br>et zeste du citron vert dessus (s'il en reste sur un arbre quelque
+part en France)"|paton4{{"tarte(s)"}}
+paton2===>|"pas le temps de Zeldater, le crémeux va pas se faire tout
+seul ⏰🔥"|citron
+paton5{{"tarte(s)"}}
+paton4-.->|"Zou, au frigo pendant 3h si agar-agar <br/> (et 5-6h sans
+gélifiant)"|paton5
+paton5-->servir(((servir)))
+end

@@ -1,0 +1,31 @@
+graph TD;
+
+%% Ustensiles
+plat(["Plat à four"]);plat1(["Plat à four"]);plat2(["Plat à four"]);plat3(["Plat à four"]); saladier(["Saladier"]);saladier2(["Saladier"]);saladier3(["Saladier"]);
+sulfu(["Papier sulfurisé"]);
+%% ingrédients
+farine{{"500g farine T55"}}; eau{{"Eau à 20-30°"}}; levure{{"6g Levure de boulanger"}};sucre{{"Sucre"}}; sel{{"10g sel"}}; romarin{{"2 cs romarin"}}; huile{{"2 cs huile d'olive"}}; paton{{"Pâton"}};paton2{{"Pâton"}};
+
+farine --> saladier; eau --> saladier; levure --> saladier; sel --> saladier; sucre --> saladier;
+
+saladier -.->|Mélanges à la cuillère<br/>La pâte est très collante, c'est normal| saladier2;
+saladier2 -.->|Laisses lever 2h<br/>vas jouer à la switch| saladier3;
+
+saladier3 --> paton;
+paton -->|Pétris-le sur un plan de travail fariné| paton2;
+
+sulfu -->|Légèrement huilé| plat;
+paton2 --> plat;
+
+plat --> plat1;
+
+romarin --> plat1;
+huile --> plat1;
+
+plat1 -.->|Laisses lever 1h30,<br/>jusqu'à ce que la pâte soit aussi gonflée<br/>que l'ego d'un gars qui a mangé<br/> un chewing gum à la confiance| plat2;
+
+plat2 -.->|20-25mn à 200 degrés| plat3;
+plat3 --> serve;
+
+%% fin
+serve((("Servir")));

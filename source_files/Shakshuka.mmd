@@ -1,0 +1,53 @@
+graph TD;
+%% Ustensiles
+poele(["Poele haute"]);
+poele1(["Poele haute"]);
+poele2(["Poele haute"]);
+four(["Four à 190°C"]);
+serve(("Servir"));
+
+%% ingrédients
+oignon{{"Oignon"}};
+huile{{"Huile d'olive"}};
+
+cutoignon{{"Oignon coupé"}};
+tomtomate{{"Pulpe de tomates"}};
+poivron{{"Poivron"}};
+cutpoivron{{"Poivron coupé"}};
+egg{{"`Oeufs
+_1/personne_`"}};
+
+%% whatevs
+subgraph whatevs ["Le whatever : tu mets ce que tu veux, ce que tu as"];
+	champis{{"Champignons"}}; tofu{{"Lardons vg"}};
+	cutchampis{{"Champignons coupés"}};
+end;
+
+%% spices
+subgraph spices ["`Épices\n _le goût, c'est nous !_`"];
+	direction LR;
+	paprika{{"`Paprika
+	_1 cc_`"}};
+	ail{{"`Ail
+	_2 cc_`"}};
+	cumin{{"`Cumin
+	_1 cc_`"}};
+	piment{{"`Piment
+	_selon goût_`"}};
+end;
+poivron --> cutpoivron;
+oignon --> cutoignon;
+huile --> poele;
+cutoignon --> poele;
+cutpoivron --> poele;
+poele -.->|Fais revenir jusqu'à cuisson des oignons, 8-10mn| poele1;
+champis --> cutchampis;
+cutchampis --> poele1;
+tofu --> poele1;
+tomtomate --> poele1;
+spices --> poele1;
+poele1 -.->|Laisse cuire gentiment 20mn\nbloup bloup bloup| poele2;
+egg --> poele2;
+poele2 -->|Hop au four, ou à la poele si la flemme| four;
+four -.->|Attends 7-10mn| serve;
+coriandre["Coriandre"] -->|Saupoudre de coriandre fraîche| serve;

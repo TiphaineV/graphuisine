@@ -1,0 +1,57 @@
+%%{
+  init: {
+    'theme': 'default',
+    'themeVariables': {
+        'edgeLabelBackground': '#ffffff'
+    }
+  }
+}%%
+graph TD
+%% Ustensiles
+cocotte1([cocotte]); cocotte2([cocotte]); cocotte3([cocotte]);cocotte4([cocotte]);cocotte5([cocotte]); 
+mixer(["mixeur Sophie,<br>(de ceux qui ont vécu la Grande Guerre du Pralin.)"])
+
+
+%% ingrédients
+champignons{{"champignons 300g <br>(de Paris, pleurotes, neither or both )"}}
+ail{{ail}}
+huile{{huile d'olive}}
+creme{{une lichette de crème épaisse}}
+herbes{{une touffette de cerfeuil / persil}}
+lamelles{{deux trois lammellettes de champignons grillés}}
+pignons{{une crounchette de pignons toastés}}
+maizena{{un schlourp de maizena}}
+vin{{"un schloussh de vin ou de sake (facultatif)"}}
+eau{{eau}}
+maggi{{deux bouillon-cubes}}
+
+subgraph base ["La base"]
+direction LR
+huile-->cocotte1
+ail-->cocotte1
+champignons-->cocotte1
+cocotte1-.->|fais rissoler tout doucement <br> jusqu'à l'obtention d'une fricassée au doux parfum d'ail|cocotte2
+vin-->|déglace|cocotte2
+cocotte2-.->|attends que l'alcool évapore|cocotte3
+maizena-->|épaissis|cocotte3
+
+end 
+
+subgraph liquidification ["La liquidification"]
+direction LR
+cocotte3-.->|jusqu'à obtention d'une bouillasse|cocotte4
+eau-->|verse de quoi remplir la cocotte aux 2/3|cocotte4
+maggi-->|"jette nonchalamment <br> (à ne pas confondre avec jetimothée chalamet)"|cocotte4
+cocotte4-.->|laisse bloublouter|cocotte5
+mixer-->|BRRZZZZZZZZZZZZZZZZZZZZZZZZZ <br> VVVVRRBBRRRR|cocotte5
+end
+
+cocotte5-->serve((("Servir")))
+
+subgraph facultatif ["Ornements dégustables"]
+direction LR
+creme-->serve;
+herbes-->serve;
+lamelles-->serve;
+pignons-->serve;
+end;

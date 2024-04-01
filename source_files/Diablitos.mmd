@@ -1,0 +1,27 @@
+graph TD;
+
+%% Ustensiles
+poele0(["Poêle à bords hauts"]); poele1(["Poêle à bords hauts"]);poele2(["Poêle à bords hauts"]); bol(["Bol"]); 
+
+%% ingrédients
+ail{{"Ail"}}; lardons{{"Lardons végé"}};ec{{"Eau chaude"}};
+chipotles{{"`Chipotles fumés
+_1-3_`"}};
+chipotles2{{"Chipotles réhydratés"}}; huile{{"Huile"}}; oignons{{"Oignons"}}; pulpe{{"Pulpe de tomates"}}; oignonscut{{Oignons en lamelles}};
+
+%% fin
+serve((("Servir")));
+
+chipotles --> bol;
+ec --> bol;
+bol -..-> |Attends 20mn| chipotles2;
+huile --> poele0;
+oignons -->|Coupes| oignonscut;
+oignonscut --> poele0;
+ail --> poele0;
+chipotles2 --> poele0;
+lardons --> poele0;
+poele0 -..->|Fais rissoler env. 8mn| poele1;
+pulpe --> poele1;
+poele1 -..->|Couvres, laisses bloublouter à feu doux| poele2;
+poele2 -..-> |Hors du feu, un trait d'huile d'olive *chef's kiss*| serve;

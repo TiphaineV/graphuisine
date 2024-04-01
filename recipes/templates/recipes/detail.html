@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block sidebar %}
+
+  <aside id="sidebar" class="sidebar">
+  <h2>Ingrédients</h2>
+  <ul class="sidebar-nav" id="sidebar-nav">
+  {% for i in ingredients %}
+  <li class="nav-item"><a class="nav-link"><span>{{ i }}</a></span></li>
+  {% endfor %}
+  <h2>Ustensiles</h2>
+  {% for i in utensils %}
+  <li class="nav-item"><a class="nav-link"><span>{{ i }}</span></a></li>
+  {% endfor %}
+  </ul>
+  </aside>
+{% endblock %}
+
+
+{% block content %}
+<a href="/recipes/">Back to list</a>
+<div class="col-12">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ recipe.title }} <span>| {{ recipe.tag_list.all | join:", " }}</span></h5>
+  {% with slugtitle=recipe.title|slugify %}
+    <object width="100%" data="{% static '/recipes/svg/'|add:slugtitle|add:'.svg' %}" ></object>
+  {% endwith %}
+</div>
+</div>
+</div>
+{% endblock %}

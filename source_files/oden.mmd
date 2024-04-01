@@ -1,0 +1,53 @@
+graph TD
+    title["<i>Oden du réconfort, façon Tokyo</i>"]
+    style title fill:#FFF,stroke:#FFF
+    title ~~~ bouillon
+
+	pot(["Fait-tout"]);	
+	pot1(["Fait-tout"]);	
+	pot2(["Fait-tout"]);
+    pot3(["Fait-tout"]);
+
+	daikon{{"Daikon"}};
+	tofu{{"Tofu frit"}};
+    noodles{{"Nouilles (konjac, soba...)"}}
+
+
+	subgraph bouillon["Bouillon"]
+        sub_bouillon["<i>Secret's in the sauce</i>"]
+        style sub_bouillon fill:#FFF,stroke:#FFF
+        sub_bouillon ~~~ kombu
+		%% ingrédients
+		kombu{{"Kombu 2-3 morceaux"}}
+		shoyu{{"Sauce soja 2cs"}}
+		mirin{{"Mirin 1cs"}}
+		eau{{"Eau 1L"}}
+		sake{{"Sake 1cs"}}
+
+		kombu --> pot
+		shoyu --> pot
+		mirin --> pot
+        sake --> pot
+		eau --> pot
+	end
+
+    
+	pot -->|Bloup bloup bloup, à ébullition| pot1;
+	
+	daikon -->|Coupcoupcoupe\n et \n foufoufous| pot1;
+
+	pot1 -.->|Environ 20mn,\n plante la pointe d'un couteau dans le daikon| pot2;
+
+	tofu --> pot2;
+
+    fishcake{{"Fishu-keki-kun 🥺"}}
+
+    fishcake --> pot2
+	%% Sers
+	serve(("Yum yum"));
+	pot2 -.->|Bloupbloupbloup 10mn| pot3;
+    noodles -.->|Le temps de cuisson des nouilles| pot3;
+    
+    eggs_{{"Oeufs ajitsuke\n<i>T'as la flemme ? Moi aussi.\nMets juste des oeufs durs ou mollets.</i>"}} --> pot3
+    
+    pot3 --> serve;

@@ -1,0 +1,54 @@
+graph TD
+ title[<i>Cake citron-pavot, vite préparé vite avalé]
+style title fill:#FFF,stroke:#FFF
+title ~~~ crème
+
+moule1([moule à cake chemisé ou beurrofariné])
+moule2([moule à cake chemisé ou beurrofariné])
+
+ 
+subgraph Matières liquides
+%% Ustensiles
+poule1([cul de poule]);poule2([cul de poule]);poule3([cul de poule]);poule4([cul de poule]); poule5([cul de poule]) 
+%% ingrédients
+oeufs{{4 œufs}}
+sucre{{300g sucre}}
+zeste{{zeste de 4 citrons}}
+crème{{130g de crème épaisse}}
+beurre{{70g de beurre fondu}}
+
+oeufs --> poule1; crème --> poule1; zeste --> poule1; sucre --> poule1 
+
+poule1 -.->|🔥fouette vigoureusement🔥 <br/> montre que tu fais pas de l'escalade pour rien | poule2;
+beurre --> poule2
+poule2 -.-> |🔥🔥 FOUETTE 🔥🔥| poule3
+end 
+
+subgraph Matières sèches 
+%% Ustensiles
+
+bol1([gros bol])
+bol2([gros bol])
+
+%% ingrédients
+farine{{230g de farine}}
+sel{{2g de sel}}
+levure{{5g de levure chimique}}
+
+farine --> bol1; sel --> bol1; levure --> bol1
+bol1 -.->|🎵 touille, touille, you touille bis 🎵| bol2;
+bol2 --> poule3
+end
+poule3-.-> |🔥🔥🔥HIYAAAAAAAAAH🔥🔥🔥| poule4
+
+subgraph Matières papavéracéennes
+pavot{{20g de graines de pavot}}
+pavot-->poule4
+end
+
+poule4 -.-> |un dernier p'tit coup de fouet| poule5
+
+poule5-->moule1
+moule1 -.-> |enfourne à 190º pendant 40 minutes| moule2 
+
+moule2 -->serve((("Servir")))

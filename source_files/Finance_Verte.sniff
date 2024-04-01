@@ -1,0 +1,51 @@
+%%{
+  init: {
+    'theme': 'default',
+    'themeVariables': {
+        'edgeLabelBackground': '#ffffff'
+    }
+  }
+}%%
+graph TD;
+
+%% Ustensiles
+
+classDef Ustensiles fill:#ddd,stroke:#333,stroke-width:4px;
+moules(["Des moules à financiers, ou à muffins"]);
+four240(["Four préchauffé à 240°C"]);
+four220(["Four chauffé à 220°C"]);
+four2202(["Four chauffé à 220°C"]);
+saladier(["Saladier"]); saladier2(["Saladier"]); saladier3(["Saladier"]);
+class moules,four240,four220,four2202,saladier,saladier2,saladier3 Ustensiles;
+
+matcha{{"Du matcha"}};
+poudreamande{{"60g poudre d'amande\n<i>(ne pas confondre avec la poudre d'ail)</i>"}};
+farine{{"150g farine"}}; sucre{{"125g sucre"}};
+lait{{"160mL lait végétal"}};
+
+subgraph oil ["<b>Matières oléagineuses</b>"];
+subtext("Donne une texture ferme, mais ça se remplace bien avec de l'huile d'olive.");
+    subtext ~~~ huilecoco;
+    huilecoco{{"50g d'huile de coco désodorisée"}};
+    huileraisin{{"50g d'huile de pépins de raisins"}};
+end;
+
+
+lait --> saladier;
+sucre --> saladier;
+saladier -.-> |"Fouette au batteur\nélectrico- ou musculo-propulsé"| saladier2;
+
+farine --> saladier2;
+matcha --> saladier2;
+poudreamande --> saladier2;
+saladier2 -->|"Mélange bien"| saladier3;
+oil --> saladier3;
+saladier3 -->|"Verse dans les moules.\nLèche le surplus en douce."| moules;
+moules --> four240;
+
+four240 -->|"En enfournant, baisses la température à 220°C"| four220;
+four220 -.->|"Patiente 10-20mn (précis, I know).\nLes financiers doivent dorer et passer le test dit « de la pointe du couteau »"| four2202;
+four2202 --> serve;
+
+%% fin
+serve((("Laisse refroidir avant de démouler,\net déconstruis ces financiers")));

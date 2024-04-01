@@ -1,0 +1,97 @@
+%%{
+  init: {
+    'theme': 'default',
+    'themeVariables': {
+        'edgeLabelBackground': '#ffffff'
+    }
+  }
+}%%
+
+graph TD
+title["<i>DamDam Noodles, peanut (feat la Bible) edition"]
+title ~~~ peanut
+
+%%ingrédients 
+	%%sauce
+peanut{{"purée/beurre de cacahuètes \n[2,5 belles càs]"}}
+soja{{"sauce soja légère \n[2,5 belles càs aussi]"}}
+vinaigre{{"vinaigre de Chinkiang (sinon balsamique) \n[1,5 càs]"}}
+ail{{"2 gousses d'ail, finement émincées"}}
+cebette1{{"une cébette, finement émincée"}}
+miel{{"miel ou liquide sucrant \n[1 càs]"}}
+poivre{{"<b>facultatif</b> : poivre du Sichuan grillé et moulu \n[1/2 càc]"}}
+
+	%%proteines
+tofu{{"tofu en cubes \nou substitut végé quelconque [225g]"}}
+gingembre{{"gingembre hâché \n[1/2 càs]"}}
+cebette2{{"une cébette, émincées grossièrement"}}
+vin{{"vin de Shaoxing \n(ou n'importe quoi pour déglacer)\n[1/2 càs]"}}
+sucre{{"sucre [1/4 càc]"}}
+	%%nomnom
+nouilles{{"nouilles fines de blé"}}
+legumes{{"légumes verts de ton choix: \népinards, pakchoi etc."}}
+	%%facultatif
+cahuète{{"une poignée de cacahuètes grillées, écrasées"}}
+coriandre{{"coriandre ciselée"}}
+chilioil{{"huile pimentée"}}
+
+
+classDef Ustensiles fill:#ddd,stroke:#333,stroke-width:4px;
+bol(["bol"])
+bol2(["bol"])
+poele(["poêle"])
+poele2(["poêle"])
+poele3(["poêle"])
+assiette(["assiette creuse"])
+assiette2(["assiette creuse"])
+cocotte(["cocotte d'eau bouillante"])
+cocotte2(["cocotte toujours"])
+cocotte3(["cocotte encore"])
+cocotte4(["cocotte forever"])
+grobol(["assiette à soupe ou gros confort bol \navec la fourssette qui va bien"])
+class bol,bol2,poele,poele2,poele3,assiette,assiette2,cocotte,cocotte2,cocotte3,cocotte4 Ustensiles;
+
+subgraph sauce ["La sauce"]
+peanut-->bol;soja-->bol
+bol-.->|silence, ça touille|bol2
+cebette1-->bol2
+poivre-->bol2
+vinaigre-->|tou—|bol2
+ail-->|tou—|bol2
+miel-->|—you touille|bol2
+
+end
+
+subgraph proteine ["La protéine"]
+poele-.->|fais chauffer avec un fond d'huile|poele2
+tofu-->poele2
+poele2-.->|"fais sauter jusqu'à ce que ça carlabrunisse)"|poele3
+gingembre-->poele3
+cebette2-->poele3
+vin-->poele3
+sucre-->poele3
+poele3-.->|"quand tout a cuit / réduit / maillardo-réagi, \nréserve"|assiette
+end
+
+subgraph noodles ["Les nouilles (pas moi, les autres) et les légumes"]
+nouilles-->cocotte
+cocotte-.->|"lis le paquet et suis les instructions de cuisson\n(pas comme je viens de faire)"|cocotte2
+cocotte2-.->|"réserve les nouilles"|assiette2
+cocotte2-.->cocotte3
+legumes-->cocotte3
+cocotte3-.->|"blanchis les rapidement"|cocotte4
+cocotte4-.->|"réserve les légumes"|assiette2
+end
+
+subgraph facultatif ["Pour épater la galerie comme Lazare en Jn 11:1–44"]
+cahuète
+chilioil
+coriandre
+end
+
+
+bol2-->|"<b>étape 1:</b> pense à l'infinie générosité de notre Seigneur \n et verse copieusement de la sauce au fond du bol \n(tu peux diluer avec de l'eau chaude pour en faire un plat ramenoïdal)"|grobol
+assiette2-->|"<b>étape 2:</b> relis Matthieu 14:14-21 \n et répartis les nouilles comme Jésus le fit jadis avec les petits pains et les poissons"|grobol
+assiette2-->|"<b>étape 3:</b> songe à l'inépuisable bienveillance de Santa Nutrición de las Verduras \n et rajoute des légumes"|grobol
+assiette-->|"<b>étape 4:</b> médite sur Romains 14:21 et couvre ton bol de protéines vegétales avec satisfaction"|grobol
+facultatif-->|"b>étape 5:</b> agrémente le bol de ce qui te fait plaisir et prosterne-toi devant lui comme devant l'Éternel avec des ornements sacrés"|grobol

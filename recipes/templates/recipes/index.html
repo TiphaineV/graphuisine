@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+
+  <h4>Liste des recettes</h4>
+
+  {% if recipe_list %}
+          {% for recipe in recipe_list %}
+          <section class="pagetitle">
+          <a href="{% url 'recipes:detail' recipe.id %}">
+            <div class="row card col-xl-12" >
+              <div class="card-body" style="background-image:url(/{{ recipe.img }}); object-fit:contain; background-repeat:no-repeat; background-position:right;">
+                <h5 class="card-title">{{ recipe.title }}</a></h5>
+                {{ recipe.tag_list.all | join:", " }}
+            </div>
+
+
+              </div></a>
+          </section>
+          {% endfor %}
+  {% else %}
+      <p>No recipes are available.</p>
+  {% endif %}
+{% endblock %}
